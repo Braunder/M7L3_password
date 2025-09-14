@@ -20,3 +20,10 @@ def test_password_length():
 Тест, что длина пароля соответствует заданной
 Тест, что два сгенерированных подряд пароля различаются
 """
+
+def test_diferent_password():
+    """Тест что пароли отличаются"""
+    for i in range(10):
+        password1 = generate_password(100)
+        password2 = generate_password(100)
+        assert password1 != password2,"Два разных пароля"
